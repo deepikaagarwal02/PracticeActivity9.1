@@ -2247,11 +2247,12 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 </header>
 
 
+<p>Link to Github Repo: <a href="https://github.com/deepikaagarwal02/PracticeActivity9.1" class="uri">https://github.com/deepikaagarwal02/PracticeActivity9.1</a></p>
 <section id="the-data" class="level2">
 <h2 class="anchored" data-anchor-id="the-data">The Data</h2>
 <p>At this link, you will find a dataset containing information about heart disease patients: https://www.dropbox.com/scl/fi/0vrpdnq5asmeulc4gd50y/ha_1.csv?rlkey=ciisalceotl77ffqhqe3kujzv&amp;dl=1</p>
 <p>A description of the original dataset can be found here: https://archive.ics.uci.edu/dataset/45/heart+disease (However, this dataset has been cleaned and reduced, and the people have been given fictious names.)</p>
-<div id="cell-2" class="cell" data-execution_count="70">
+<div id="cell-3" class="cell" data-execution_count="70">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import Libraries</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -2263,7 +2264,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.svm <span class="im">import</span> SVC</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> plotnine <span class="im">import</span> <span class="op">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-3" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}}" data-outputid="bd80b6ac-4b0d-40f6-dcea-80b331462f3c" data-execution_count="71">
+<div id="cell-4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}}" data-outputid="bd80b6ac-4b0d-40f6-dcea-80b331462f3c" data-execution_count="71">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ha <span class="op">=</span> pd.read_csv(<span class="st">&quot;ha_1.csv&quot;</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ha.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
@@ -2352,7 +2353,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 </div>
 </div>
 </div>
-<div id="cell-4" class="cell" data-execution_count="72">
+<div id="cell-5" class="cell" data-execution_count="72">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> ha[[<span class="st">&quot;age&quot;</span>,<span class="st">&quot;chol&quot;</span>]]</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> ha[<span class="st">&quot;diagnosis&quot;</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -2362,7 +2363,7 @@ var requirejs,require,define;(function(global,setTimeout){var req,s,head,baseEle
 <p>Fit a Logistic Regression using only <code>age</code> and <code>chol</code> (cholesterol) as predictors.</p>
 <p>For a 55 year old, how high would their cholesterol need to be for the doctors to predict heart disease is present?</p>
 <p>How high for the doctors to estimate a 90% chance that heart disease is present?</p>
-<div id="cell-6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:154}}" data-outputid="45ca2048-4d6e-47f9-fe54-9f54e097c106" data-execution_count="73">
+<div id="cell-7" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:154}}" data-outputid="45ca2048-4d6e-47f9-fe54-9f54e097c106" data-execution_count="73">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>logistic_model <span class="op">=</span> Pipeline(</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  [(<span class="st">&quot;standardize&quot;</span>, StandardScaler()),</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  (<span class="st">&quot;logistic&quot;</span>, LogisticRegression())]</span>
@@ -2724,11 +2725,11 @@ display: block;
                 (&#39;logistic&#39;, LogisticRegression())])</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-23" type="checkbox"><label for="sk-estimator-id-23" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>StandardScaler</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.preprocessing.StandardScaler.html">?<span>Documentation for StandardScaler</span></a></div></label><div class="sk-toggleable__content fitted"><pre>StandardScaler()</pre></div> </div></div><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-24" type="checkbox"><label for="sk-estimator-id-24" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LogisticRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.linear_model.LogisticRegression.html">?<span>Documentation for LogisticRegression</span></a></div></label><div class="sk-toggleable__content fitted"><pre>LogisticRegression()</pre></div> </div></div></div></div></div></div>
 </div>
 </div>
-<div id="cell-7" class="cell" data-execution_count="74">
+<div id="cell-8" class="cell" data-execution_count="74">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> logistic_model_fitted.named_steps[<span class="st">&#39;standardize&#39;</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> logistic_model_fitted.named_steps[<span class="st">&#39;logistic&#39;</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bde109e8-81d5-4c92-bfc8-787682952dd7" data-execution_count="75">
+<div id="cell-9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bde109e8-81d5-4c92-bfc8-787682952dd7" data-execution_count="75">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>logistic_age_coef <span class="op">=</span> model.coef_[<span class="dv">0</span>][<span class="dv">0</span>]</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>logistic_chol_coef <span class="op">=</span> model.coef_[<span class="dv">0</span>][<span class="dv">1</span>]</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>logistic_intercept <span class="op">=</span> model.intercept_</span>
@@ -2740,7 +2741,7 @@ display: block;
  array([-0.27025982]))</code></pre>
 </div>
 </div>
-<div id="cell-9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="505433eb-b81b-4400-82b0-4590fcf344cb" data-execution_count="76">
+<div id="cell-10" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="505433eb-b81b-4400-82b0-4590fcf344cb" data-execution_count="76">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mean_age <span class="op">=</span> scaler.mean_[<span class="dv">0</span>]</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>mean_chol <span class="op">=</span> scaler.mean_[<span class="dv">1</span>]</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2749,7 +2750,7 @@ display: block;
 <pre><code>(np.float64(53.81372549019608), np.float64(248.37745098039215))</code></pre>
 </div>
 </div>
-<div id="cell-10" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="4c6f44f7-12fb-4ac0-9b0b-b1cf032145fe" data-execution_count="77">
+<div id="cell-11" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="4c6f44f7-12fb-4ac0-9b0b-b1cf032145fe" data-execution_count="77">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>std_age <span class="op">=</span> scaler.scale_[<span class="dv">0</span>]</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>std_chol <span class="op">=</span> scaler.scale_[<span class="dv">1</span>]</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -2758,7 +2759,7 @@ display: block;
 <pre><code>(np.float64(9.331824519664996), np.float64(53.046129401520815))</code></pre>
 </div>
 </div>
-<div id="cell-11" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="6765b19b-d59c-48f3-9821-75249918d0b3" data-execution_count="78">
+<div id="cell-12" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="6765b19b-d59c-48f3-9821-75249918d0b3" data-execution_count="78">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Standardize age</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">55</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>z_age <span class="op">=</span> (age <span class="op">-</span> mean_age) <span class="op">/</span> std_age</span>
@@ -2767,7 +2768,7 @@ display: block;
 <pre><code>np.float64(0.1271213906031003)</code></pre>
 </div>
 </div>
-<div id="cell-12" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="1ed90f9b-6088-4fbb-bc1b-605f6776ecc2" data-execution_count="79">
+<div id="cell-13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="1ed90f9b-6088-4fbb-bc1b-605f6776ecc2" data-execution_count="79">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Solve for standardized chol when p = 0.5</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="fl">0.5</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>z_chol_50 <span class="op">=</span> (np.log(p<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>p))<span class="op">-</span>logistic_intercept<span class="op">-</span>(logistic_age_coef<span class="op">*</span>z_age))<span class="op">/</span>logistic_chol_coef</span>
@@ -2779,7 +2780,7 @@ display: block;
 <pre><code>array([367.71778753])</code></pre>
 </div>
 </div>
-<div id="cell-13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="1c87ba06-5e4a-4af4-fd15-b7bba36cb2a9" data-execution_count="80">
+<div id="cell-14" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="1c87ba06-5e4a-4af4-fd15-b7bba36cb2a9" data-execution_count="80">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Solve for standardized chol when p = 0.9</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="fl">0.9</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>z_chol_90 <span class="op">=</span> (np.log(p<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>p))<span class="op">-</span>logistic_intercept<span class="op">-</span>(logistic_age_coef<span class="op">*</span>z_age))<span class="op">/</span>logistic_chol_coef</span>
@@ -2797,7 +2798,7 @@ display: block;
 <h2 class="anchored" data-anchor-id="linear-discriminant-analysis">2. Linear Discriminant Analysis</h2>
 <p>Fit an LDA model using only <code>age</code> and <code>chol</code> (cholesterol) as predictors.</p>
 <p>For a 55 year old, how high would their cholesterol need to be for the doctors to predict heart disease is present?</p>
-<div id="cell-16" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:154}}" data-outputid="e3e3814e-452d-45d5-d778-8819d7ce2913" data-execution_count="81">
+<div id="cell-17" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:154}}" data-outputid="e3e3814e-452d-45d5-d778-8819d7ce2913" data-execution_count="81">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>lda_model <span class="op">=</span> Pipeline(</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  [(<span class="st">&quot;standardize&quot;</span>, StandardScaler()),</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  (<span class="st">&quot;lda&quot;</span>, LinearDiscriminantAnalysis())]</span>
@@ -3159,11 +3160,11 @@ display: block;
                 (&#39;lda&#39;, LinearDiscriminantAnalysis())])</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-26" type="checkbox"><label for="sk-estimator-id-26" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>StandardScaler</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.preprocessing.StandardScaler.html">?<span>Documentation for StandardScaler</span></a></div></label><div class="sk-toggleable__content fitted"><pre>StandardScaler()</pre></div> </div></div><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-27" type="checkbox"><label for="sk-estimator-id-27" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LinearDiscriminantAnalysis</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html">?<span>Documentation for LinearDiscriminantAnalysis</span></a></div></label><div class="sk-toggleable__content fitted"><pre>LinearDiscriminantAnalysis()</pre></div> </div></div></div></div></div></div>
 </div>
 </div>
-<div id="cell-17" class="cell" data-execution_count="82">
+<div id="cell-18" class="cell" data-execution_count="82">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> lda_model_fitted.named_steps[<span class="st">&#39;standardize&#39;</span>]</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> lda_model_fitted.named_steps[<span class="st">&#39;lda&#39;</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="cell-18" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="1d987ca1-99c9-42e7-ff99-028bcadb13b6" data-execution_count="83">
+<div id="cell-19" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="1d987ca1-99c9-42e7-ff99-028bcadb13b6" data-execution_count="83">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>lda_age_coef <span class="op">=</span> model.coef_[<span class="dv">0</span>][<span class="dv">0</span>]</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>lda_chol_coef <span class="op">=</span> model.coef_[<span class="dv">0</span>][<span class="dv">1</span>]</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>lda_intercept <span class="op">=</span> model.intercept_</span>
@@ -3175,7 +3176,7 @@ display: block;
  array([-0.26973565]))</code></pre>
 </div>
 </div>
-<div id="cell-19" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="99c46548-73b4-4a5c-d535-30cd3f6bfdea" data-execution_count="84">
+<div id="cell-20" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="99c46548-73b4-4a5c-d535-30cd3f6bfdea" data-execution_count="84">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>mean_age <span class="op">=</span> scaler.mean_[<span class="dv">0</span>]</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>mean_chol <span class="op">=</span> scaler.mean_[<span class="dv">1</span>]</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3184,7 +3185,7 @@ display: block;
 <pre><code>(np.float64(53.81372549019608), np.float64(248.37745098039215))</code></pre>
 </div>
 </div>
-<div id="cell-20" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="1cb2b337-1500-4aae-99aa-3fd97074ddf5" data-execution_count="85">
+<div id="cell-21" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="1cb2b337-1500-4aae-99aa-3fd97074ddf5" data-execution_count="85">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>std_age <span class="op">=</span> scaler.scale_[<span class="dv">0</span>]</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>std_chol <span class="op">=</span> scaler.scale_[<span class="dv">1</span>]</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3193,7 +3194,7 @@ display: block;
 <pre><code>(np.float64(9.331824519664996), np.float64(53.046129401520815))</code></pre>
 </div>
 </div>
-<div id="cell-21" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bd3269e0-045c-4b72-b6d9-bef8b7fb06f4" data-execution_count="86">
+<div id="cell-22" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bd3269e0-045c-4b72-b6d9-bef8b7fb06f4" data-execution_count="86">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Standardize age</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">55</span></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>z_age <span class="op">=</span> (age <span class="op">-</span> mean_age) <span class="op">/</span> std_age</span>
@@ -3202,7 +3203,7 @@ display: block;
 <pre><code>np.float64(0.1271213906031003)</code></pre>
 </div>
 </div>
-<div id="cell-22" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="458c2f87-68ea-4b08-abe2-a3101b5f2065" data-execution_count="87">
+<div id="cell-23" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="458c2f87-68ea-4b08-abe2-a3101b5f2065" data-execution_count="87">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Solve for standardized chol when p = 0.5</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="fl">0.5</span></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>z_chol_50 <span class="op">=</span> (np.log(p<span class="op">/</span>(<span class="dv">1</span><span class="op">-</span>p))<span class="op">-</span>lda_intercept<span class="op">-</span>(lda_age_coef<span class="op">*</span>z_age))<span class="op">/</span>lda_chol_coef</span>
@@ -3220,7 +3221,7 @@ display: block;
 <h2 class="anchored" data-anchor-id="support-vector-classifier">3. Support Vector Classifier</h2>
 <p>Fit an SVC model using only <code>age</code> and <code>chol</code> as predictors. Don’t forget to tune the regularization parameter.</p>
 <p>For a 55 year old, how high would their cholesterol need to be for the doctors to predict heart disease is present?</p>
-<div id="cell-25" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:79}}" data-outputid="93aa7f04-cf0c-4902-e76f-c22a6cb954f3" data-execution_count="88">
+<div id="cell-26" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:79}}" data-outputid="93aa7f04-cf0c-4902-e76f-c22a6cb954f3" data-execution_count="88">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tune regularization parameter C</span></span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>param_grid <span class="op">=</span> {<span class="st">&#39;svc__C&#39;</span>: [<span class="fl">0.01</span>, <span class="fl">0.1</span>, <span class="dv">1</span>, <span class="dv">10</span>, <span class="dv">100</span>]}</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -3588,7 +3589,7 @@ display: block;
 </style><div id="sk-container-id-12" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>SVC(C=10, kernel=&#39;linear&#39;, probability=True)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-28" type="checkbox" checked><label for="sk-estimator-id-28" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>SVC</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.svm.SVC.html">?<span>Documentation for SVC</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>SVC(C=10, kernel=&#39;linear&#39;, probability=True)</pre></div> </div></div></div></div>
 </div>
 </div>
-<div id="cell-26" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="b0e9930c-5bac-4cef-c0e2-b36173d07b4b" data-execution_count="89">
+<div id="cell-27" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="b0e9930c-5bac-4cef-c0e2-b36173d07b4b" data-execution_count="89">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>svc_age_coef  <span class="op">=</span> svc_model_best.coef_[<span class="dv">0</span>][<span class="dv">0</span>]</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>svc_chol_coef <span class="op">=</span> svc_model_best.coef_[<span class="dv">0</span>][<span class="dv">1</span>]</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>svc_intercept <span class="op">=</span> svc_model_best.intercept_[<span class="dv">0</span>]</span>
@@ -3600,7 +3601,7 @@ display: block;
  np.float64(-0.3113452398450633))</code></pre>
 </div>
 </div>
-<div id="cell-27" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="83d7f195-2b82-4a40-c659-d477fc81d842" data-execution_count="90">
+<div id="cell-28" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="83d7f195-2b82-4a40-c659-d477fc81d842" data-execution_count="90">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Solve for chol when f(x) = 0 (Threshold)</span></span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>f_x <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>z_chol_svc <span class="op">=</span> (f_x<span class="op">-</span>svc_intercept<span class="op">-</span>(svc_age_coef<span class="op">*</span>z_age))<span class="op">/</span>svc_chol_coef</span>
@@ -3617,7 +3618,7 @@ display: block;
 <section id="comparing-decision-boundaries" class="level2">
 <h2 class="anchored" data-anchor-id="comparing-decision-boundaries">4. Comparing Decision Boundaries</h2>
 <p>Make a scatterplot of <code>age</code> and <code>chol</code>, coloring the points by their true disease outcome. Add a line to the plot representing the <strong>linear separator</strong> (aka <strong>decision boundary</strong>) for each of the three models above.</p>
-<div id="cell-30" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="6a27d85f-14ef-44d5-988c-02e0de7bd701" data-execution_count="91">
+<div id="cell-31" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:423}}" data-outputid="6a27d85f-14ef-44d5-988c-02e0de7bd701" data-execution_count="91">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>new_df <span class="op">=</span> ha.copy()</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>new_df[<span class="st">&quot;age_std&quot;</span>] <span class="op">=</span> (new_df[<span class="st">&quot;age&quot;</span>] <span class="op">-</span> new_df[<span class="st">&quot;age&quot;</span>].mean()) <span class="op">/</span> new_df[<span class="st">&quot;age&quot;</span>].std()</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>new_df[<span class="st">&quot;chol_std&quot;</span>] <span class="op">=</span> (new_df[<span class="st">&quot;chol&quot;</span>] <span class="op">-</span> new_df[<span class="st">&quot;chol&quot;</span>].mean()) <span class="op">/</span> new_df[<span class="st">&quot;chol&quot;</span>].std()</span>
@@ -3805,7 +3806,7 @@ display: block;
 </div>
 </div>
 </div>
-<div id="cell-31" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:497}}" data-outputid="fcc5f4fd-a947-4b6b-da1b-115451908893" data-execution_count="92">
+<div id="cell-32" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:497}}" data-outputid="fcc5f4fd-a947-4b6b-da1b-115451908893" data-execution_count="92">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>(ggplot(new_df, aes(x <span class="op">=</span> <span class="st">&quot;age_std&quot;</span>, y <span class="op">=</span> <span class="st">&quot;chol_std&quot;</span>, color <span class="op">=</span> <span class="st">&quot;diagnosis&quot;</span>))</span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="op">+</span> geom_point()</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="op">+</span> geom_abline(intercept <span class="op">=</span> <span class="op">-</span> logistic_intercept <span class="op">/</span> logistic_chol_coef, slope <span class="op">=</span> <span class="op">-</span> logistic_age_coef <span class="op">/</span> logistic_chol_coef, color <span class="op">=</span> <span class="st">&quot;purple&quot;</span>)</span>
